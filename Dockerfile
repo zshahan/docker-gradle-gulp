@@ -2,7 +2,7 @@ FROM gradle:4.9-alpine
 
 USER root
 
-RUN apk add --no-cache git nodejs
+RUN apk add --no-cache git nodejs nodejs-npm
 RUN apk add --no-cache --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers \
   make python curl autoconf automake \
