@@ -1,7 +1,7 @@
 FROM gradle:4.9-alpine
 
-RUN apk add --update --no-cache git nodejs
-RUN apk --no-cache --update add --virtual native-deps \
+RUN apk add --no-cache git nodejs
+RUN apk add --no-cache --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers \
   make python curl autoconf automake \
   file nasm zlib-dev && \
