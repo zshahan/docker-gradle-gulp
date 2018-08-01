@@ -1,5 +1,3 @@
-FROM gradle:4.9-alpine
-
 FROM node:alpine
 
 RUN apk add --no-cache git 
@@ -14,4 +12,4 @@ RUN apk --no-cache add --virtual native-deps \
   npm install --quiet gulp-concat -g && \
   apk del native-deps
   
-CMD ["gradle"]
+CMD ["gulp"]
