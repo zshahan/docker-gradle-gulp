@@ -6,6 +6,7 @@ RUN apk --no-cache add --virtual native-deps \
   make python curl autoconf automake \
   file nasm zlib-dev && \
   npm install --quiet gulp-cli -g && \
+  npm install --quiet gulp -g && \
   npm install --quiet gulp-clean-css -g && \
   npm install --quiet gulp-compress -g && \
   npm install --quiet gulp-minify -g && \
