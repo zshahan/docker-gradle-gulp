@@ -1,7 +1,7 @@
-FROM node:alpine
+FROM gradle:4.9-alpine
 
-RUN apk add --no-cache git 
-RUN apk --no-cache add --virtual native-deps \
+RUN apk add --update --no-cache git nodejs
+RUN apk --no-cache --update add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers \
   make python curl autoconf automake \
   file nasm zlib-dev && \
@@ -13,4 +13,4 @@ RUN apk --no-cache add --virtual native-deps \
   npm install --quiet gulp-concat -g && \
   apk del native-deps
   
-CMD ["gulp"]
+CMD ["gradle"]
