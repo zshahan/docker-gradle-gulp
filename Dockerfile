@@ -1,8 +1,8 @@
-FROM gradle:4.9-alpine
+FROM zshahan/gradle4-jdk11
 
 USER root
 
-RUN apk add --no-cache git nodejs nodejs-npm curl openssh
+RUN apk add --no-cache git nodejs nodejs-npm curl openssh rsync
 RUN apk add --no-cache --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers \
   make python autoconf automake \
